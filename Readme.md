@@ -62,17 +62,28 @@ Funcionalidades principales:
 ## Tecnologías utilizadas:
 
 Backend:
+
 Python 3.12
+
 Django 5.x
+
 Django REST Framework
+
 SQL Server
 
+
 Frontend (Android):
+
 Kotlin
+
 Android Studio
+
 Room
+
 Retrofit
+
 LiveData / ViewModel (MVVM)
+
 
 To-Do-List-Android-Kotlin/
 
