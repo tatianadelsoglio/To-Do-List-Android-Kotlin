@@ -120,7 +120,10 @@ Nota final: Este proyecto tiene fines demostrativos y educativos. Su objetivo es
 
 -------------------------------------------------------------------
 Autora:
+
 Tatiana Delsoglio
+
 Desarrolladora de Software
+
 📍 Córdoba, Argentina
 
