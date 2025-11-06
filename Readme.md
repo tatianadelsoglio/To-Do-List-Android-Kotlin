@@ -86,22 +86,12 @@ Funcionalidades principales:
 
 
 To-Do-List-Android-Kotlin/
-
-│
-
-├── android-app/           # Proyecto Android Studio
-
-│           ├── app/
-
-│           └── build.gradle
-
-│
-
-└── ToDoBackend/
-
-        ├── backend_django/    # Proyecto Django REST
-        
-        └──venv/              # Entorno virtual (no subido)
+        - ToDoTareas/           # Proyecto Android Studio
+                - app/
+                - build.gradle
+        - ToDoBackend/
+                - backend_django/    # Proyecto Django REST
+                - venv/              # Entorno virtual (no subido)
     
 
 
