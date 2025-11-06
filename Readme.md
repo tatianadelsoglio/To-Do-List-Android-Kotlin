@@ -72,7 +72,7 @@ Funcionalidades principales:
 -SQL Server
 
 
-###Frontend (Android):
+### Frontend (Android):
 
 -Kotlin
 
