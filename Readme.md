@@ -85,12 +85,18 @@ Funcionalidades principales:
 -LiveData / ViewModel (MVVM)
 
 
-To-Do-List-Android-Kotlin/
+- To-Do-List-Android-Kotlin/
+        
         - ToDoTareas/           # Proyecto Android Studio
+                
                 - app/
+                
                 - build.gradle
+       
         - ToDoBackend/
+                
                 - backend_django/    # Proyecto Django REST
+                
                 - venv/              # Entorno virtual (no subido)
     
 
