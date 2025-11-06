@@ -29,6 +29,7 @@ La conexión se realiza mediante el archivo `settings.py`, configurado para este
 ### Usuario administrador (panel Django)
 Se creó un usuario para acceder al panel de administración disponible en  
 http://127.0.0.1:8000/admin/:
+
 Username: xionico  
 Email: xionico@prueba.com  
 Password: apptarea
