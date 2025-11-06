@@ -37,8 +37,7 @@ Password: apptarea
 ### Instrucciones para ejecutar el backend
 En mi caso use un entorno virtual para ejecutar mi backend django en visual studio code. 
 
-### Crear entorno virtual
-python -m venv venv
+Primero instalar dependencia de entorno virtual: python -m venv venv
 
 Al abrir la carpeta del backend, ejecutar los siguientes comandos para el entorno virtual y levantar el servidor:
 - .\venv\Scripts\activate
