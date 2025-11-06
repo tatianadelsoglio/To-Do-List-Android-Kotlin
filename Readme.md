@@ -77,16 +77,14 @@ To-Do-List-Android-Kotlin/
 
 ├── android-app/           # Proyecto Android Studio
 
-│   ├── app/
+│           ├── app/
 
-│   └── build.gradle
+│           └── build.gradle
 
 │
 
 └── ToDoBackend/
-
     ├── backend_django/    # Proyecto Django REST
-    
     └──venv/              # Entorno virtual (no subido)
     
 
