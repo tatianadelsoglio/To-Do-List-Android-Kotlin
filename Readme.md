@@ -84,8 +84,10 @@ To-Do-List-Android-Kotlin/
 │
 
 └── ToDoBackend/
-    ├── backend_django/    # Proyecto Django REST
-    └──venv/              # Entorno virtual (no subido)
+
+        ├── backend_django/    # Proyecto Django REST
+        
+        └──venv/              # Entorno virtual (no subido)
     
 
 
