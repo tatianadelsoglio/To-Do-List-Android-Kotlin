@@ -80,6 +80,13 @@ To-Do-List-Android-Kotlin/
     └──venv/              # Entorno virtual (no subido)
 
 
+## Capturas de la aplicación
+
+### Pantalla principal
+![Pantalla principal](./captura inicio.jpg)
+
+
+
 Nota final: Este proyecto tiene fines demostrativos y educativos. Su objetivo es exhibir la integración entre una app móvil Android y un backend Django, con buenas prácticas de desarrollo, estructuración y documentación.
 
 -------------------------------------------------------------------
