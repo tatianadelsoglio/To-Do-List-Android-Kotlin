@@ -78,7 +78,6 @@ To-Do-List-Android-Kotlin/
 ├── android-app/           # Proyecto Android Studio
 
 │           ├── app/
-
 │           └── build.gradle
 
 │
