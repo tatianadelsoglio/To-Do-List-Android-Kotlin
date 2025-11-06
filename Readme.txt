@@ -83,7 +83,7 @@ To-Do-List-Android-Kotlin/
 ## Capturas de la aplicación
 
 ### Pantalla principal
-![Pantalla principal](./captura inicio.jpg)
+![Pantalla principal](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/captura%20inicio.jpg)
 
 
 
