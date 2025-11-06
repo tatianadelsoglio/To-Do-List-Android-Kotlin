@@ -39,6 +39,7 @@ Al abrir la carpeta del backend, ejecutar los siguientes comandos para el entorn
 - .\venv\Scripts\activate
 - cd .\backend_django\
 - python manage.py runserver
+
 Con estos pasos el backend se iniciara en: http://127.0.0.1:8000/
 
 ## Aplicación Android
