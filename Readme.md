@@ -61,28 +61,28 @@ Funcionalidades principales:
 
 ## Tecnologías utilizadas:
 
-Backend:
+### Backend:
 
-Python 3.12
+-Python 3.12
 
-Django 5.x
+-Django 5.x
 
-Django REST Framework
+-Django REST Framework
 
-SQL Server
+-SQL Server
 
 
-Frontend (Android):
+###Frontend (Android):
 
-Kotlin
+-Kotlin
 
-Android Studio
+-Android Studio
 
-Room
+-Room
 
-Retrofit
+-Retrofit
 
-LiveData / ViewModel (MVVM)
+-LiveData / ViewModel (MVVM)
 
 
 To-Do-List-Android-Kotlin/
