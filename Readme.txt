@@ -85,6 +85,21 @@ To-Do-List-Android-Kotlin/
 ### Pantalla principal
 ![Pantalla principal](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/captura%20inicio.jpg)
 
+### Vista creación de nueva tarea
+![Creación Nueva Tarea](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20nueva%20tarea.jpg)
+
+### Vista de nueva tarea
+![Visualizacion Nueva Tarea](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20visualizacion%20de%20nueva%20tarea.jpg)
+
+### Vista de edicion o eliminacion de una tarea
+![Edición o Eliminación de Tarea](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20vista%20edicion%20o%20eliminacion.jpg)
+
+### Vista de API Rest
+![Visualización API Rest](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20visualizacion%20API%20Rest.jpg)
+
+### Vista SQL Server
+![Visualizacion SQL Server](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20visualizacion%20SQL%20Server.jpg)
+
 
 
 Nota final: Este proyecto tiene fines demostrativos y educativos. Su objetivo es exhibir la integración entre una app móvil Android y un backend Django, con buenas prácticas de desarrollo, estructuración y documentación.
