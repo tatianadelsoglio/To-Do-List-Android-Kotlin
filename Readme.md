@@ -132,22 +132,22 @@ Funcionalidades principales:
 ## Capturas de la aplicación
 
 ### Pantalla principal
-![Pantalla principal](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/captura%20inicio.jpg)
+![Pantalla principal](screenshots/inicio.jpg)
 
 ### Vista creación de nueva tarea
-![Creación Nueva Tarea](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20nueva%20tarea.jpg)
+![Creación Nueva Tarea](screenshots/nueva-tarea.jpg)
 
 ### Vista de nueva tarea
-![Visualizacion Nueva Tarea](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20visualizacion%20de%20nueva%20tarea.jpg)
+![Visualizacion Nueva Tarea](screenshots/visualizacion-nueva-tarea.jpg)
 
 ### Vista de edicion o eliminacion de una tarea
-![Edición o Eliminación de Tarea](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20vista%20edicion%20o%20eliminacion.jpg)
+![Edición o Eliminación de Tarea](screenshots/edicion-eliminacion.jpg)
 
 ### Vista de API Rest
-![Visualización API Rest](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20visualizacion%20API%20Rest.jpg)
+![Visualización API Rest](screenshots/api-rest.jpg)
 
 ### Vista SQL Server
-![Visualizacion SQL Server](https://github.com/tatianadelsoglio/To-Do-List-Android-Kotlin/blob/main/Captura%20visualizacion%20SQL%20Server.jpg)
+![Visualizacion SQL Server](screenshots/sql-server.jpg)
 
 
 
