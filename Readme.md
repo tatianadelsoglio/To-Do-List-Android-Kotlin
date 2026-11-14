@@ -19,20 +19,33 @@ El backend fue desarrollado en **Python 3.12** con **Django REST Framework**, ut
 Expone endpoints REST para crear, listar, editar y eliminar tareas, los cuales son consumidos por la aplicación móvil.
 
 ### Base de datos
-- **Nombre:** `ToDoBackend`  
-- **Motor:** SQL Server  
-- **Usuario:** `todouser`  
-- **Contraseña:** `ToDoTareas123!`
+- **Nombre:** `ToDoBackend` (configurable)
+- **Motor:** SQL Server
 
-La conexión se realiza mediante el archivo `settings.py`, configurado para este usuario.
+La conexión se configura en `settings.py` a partir de variables de entorno. En `ToDoBackend/backend_django/.env.example` están todas las variables disponibles. El repositorio no incluye credenciales: cada quien usa las propias.
 
-### Usuario administrador (panel Django)
-Se creó un usuario para acceder al panel de administración disponible en  
-http://127.0.0.1:8000/admin/:
+### Configuración de credenciales
+1. Crear en SQL Server una base de datos y un usuario con permisos sobre ella.
+2. Copiar `.env.example` como `.env` y completar los valores (`DJANGO_SECRET_KEY`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, etc.). El archivo `.env` está en `.gitignore` y no se sube al repositorio.
+3. Django no lee `.env` por sí solo, así que hay que exportar las variables en la terminal antes de levantar el servidor. En PowerShell:
 
-Username: xionico  
-Email: xionico@prueba.com  
-Password: apptarea
+```powershell
+$env:DJANGO_SECRET_KEY = "una-clave-larga-y-aleatoria"
+$env:DB_USER = "mi_usuario"
+$env:DB_PASSWORD = "mi_password"
+```
+
+Si una variable no está definida se usa un valor por defecto pensado solo para desarrollo local; no usarlos en producción.
+
+### Crear un usuario administrador (panel Django)
+Con las variables configuradas y las migraciones aplicadas, crear un superusuario propio:
+
+```
+python manage.py migrate
+python manage.py createsuperuser
+```
+
+Luego se puede ingresar al panel en http://127.0.0.1:8000/admin/ con las credenciales elegidas.
 
 ### Instrucciones para ejecutar el backend
 En mi caso use un entorno virtual para ejecutar mi backend django en visual studio code. 
@@ -42,7 +55,7 @@ Primero instalar dependencia de entorno virtual: python -m venv venv
 Al abrir la carpeta del backend, ejecutar los siguientes comandos para el entorno virtual y levantar el servidor:
 - .\venv\Scripts\activate
 - cd .\backend_django\
-- python manage.py runserver
+- python manage.py runserver  (con las variables de entorno ya exportadas)
 
 Con estos pasos el backend se iniciara en: http://127.0.0.1:8000/
 
