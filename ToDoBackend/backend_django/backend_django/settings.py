@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^&(!^g0+ryvpsm1qx96-3$-e8^038%oke@rjg43!4r5ar9$u&t'
+# En produccion definir DJANGO_SECRET_KEY; el valor por defecto es solo para desarrollo.
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-dev-only-change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,16 +94,18 @@ DATABASES = {
 """
 #DATABASE para SQL server
 
+# Credenciales leidas de variables de entorno (ver .env.example).
+# Los valores por defecto son solo para desarrollo local.
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'ToDoBackend',
-        'USER': 'todouser',
-        'PASSWORD': 'todouser123!',
-        'HOST': 'localhost\\SQLEXPRESS',
-        'PORT': '',  # SQLEXPRESS suele no usar puerto
+        'NAME': os.environ.get('DB_NAME', 'ToDoBackend'),
+        'USER': os.environ.get('DB_USER', 'todouser'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'change-me'),
+        'HOST': os.environ.get('DB_HOST', 'localhost\\SQLEXPRESS'),
+        'PORT': os.environ.get('DB_PORT', ''),  # SQLEXPRESS suele no usar puerto
         'OPTIONS': {
-            'driver': 'ODBC Driver 18 for SQL Server',
+            'driver': os.environ.get('DB_DRIVER', 'ODBC Driver 18 for SQL Server'),
             'extra_params': 'TrustServerCertificate=Yes;Encrypt=no;',
         },
     }
