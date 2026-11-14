@@ -77,7 +77,9 @@ Flujo de datos:
 - **Editar, marcar y eliminar:** se llama a la API solo si hay conexión y el cambio se aplica siempre en Room.
 - **Sincronización:** mientras el Fragment está activo y hay conexión, se vuelve a consultar la API cada 10 segundos.
 
-Limitaciones actuales: los cambios hechos sin conexión quedan solo en Room y no se reenvían al backend al reconectar, y el Fragment accede también al DAO directamente además de usar el Repository.
+### Mejoras futuras
+- Sincronizar con el backend los cambios hechos sin conexión cuando vuelva la conectividad.
+- Mover el acceso a datos del Fragment al Repository, para que la UI no use el DAO directamente.
 
 Funcionalidades principales:
 - Obtiene las tareas desde la API o desde la base local si no hay conexión.
