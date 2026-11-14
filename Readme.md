@@ -7,9 +7,9 @@ Este proyecto demuestra el desarrollo completo de una aplicación **To-Do List**
 ## Descripción general
 
 La aplicación permite gestionar tareas de forma sencilla, incluso sin conexión a internet.  
-Cuando hay conexión, sincroniza automáticamente los datos con el backend.
+Cuando hay conexión, consulta el backend y actualiza la base local con los datos remotos.
 
-Este proyecto fue diseñado para mostrar habilidades de desarrollo **full stack**, manejo de **APIs REST**, y buenas prácticas en la arquitectura móvil (**MVVM**) y backend (**Django REST Framework**).
+Este proyecto fue diseñado para mostrar habilidades de desarrollo **full stack**, manejo de **APIs REST**, y una separación de responsabilidades en la app móvil (Fragment, Repository, Room y Retrofit) y un backend con **Django REST Framework**.
 
 ---
 
@@ -61,14 +61,28 @@ Con estos pasos el backend se iniciara en: http://127.0.0.1:8000/
 
 ## Aplicación Android
 
-La aplicación móvil fue desarrollada en Kotlin, siguiendo el patrón MVVM.
-Implementa Room para la persistencia local y Retrofit para la comunicación con la API Django.
+Desarrollada en Kotlin con una única Activity (`MainActivity`) que hospeda `ListaTareasFragment` mediante Navigation. Usa Room para la persistencia local y Retrofit para consumir la API Django.
 
+### Arquitectura
+No se utiliza ViewModel ni LiveData: la lógica de la pantalla vive en el Fragment y el acceso a datos está encapsulado en un Repository.
+
+- **`ListaTareasFragment`**: pantalla única. Maneja la UI (RecyclerView, diálogos de alta y edición), el estado de carga, el orden de las tareas, la verificación de conexión y una sincronización periódica. Usa `lifecycleScope` y corrutinas.
+- **`TareasRepository`** (`data/repository`): coordina la API remota y la base local.
+- **Room** (`data/local`): `TareasDatabase` y `TareaDao`, con la entidad `Tarea`.
+- **Retrofit** (`data/remote`): `RetrofitClient` y la interfaz `TareaApi` (endpoints `tasks/`).
+
+Flujo de datos:
+- **Lectura:** si hay conexión, el Repository pide las tareas a la API y las guarda en Room; si la API falla o no hay conexión, se leen de Room.
+- **Crear:** se envía a la API y, si responde bien, se guarda en Room.
+- **Editar, marcar y eliminar:** se llama a la API solo si hay conexión y el cambio se aplica siempre en Room.
+- **Sincronización:** mientras el Fragment está activo y hay conexión, se vuelve a consultar la API cada 10 segundos.
+
+Limitaciones actuales: los cambios hechos sin conexión quedan solo en Room y no se reenvían al backend al reconectar, y el Fragment accede también al DAO directamente además de usar el Repository.
 
 Funcionalidades principales:
 - Obtiene las tareas desde la API o desde la base local si no hay conexión.
 - Permite crear, editar, eliminar y marcar tareas como completadas.
-- Sincroniza automáticamente los cambios con el backend cuando vuelve la conexión.
+- Actualiza la lista periódicamente desde el backend cuando hay conexión.
 - Ordena las tareas mostrando primero las pendientes y luego las completadas.
 
 
@@ -95,7 +109,8 @@ Funcionalidades principales:
 
 -Retrofit
 
--LiveData / ViewModel (MVVM)
+-Corrutinas (`lifecycleScope`)
+-Navigation
 
 
 - To-Do-List-Android-Kotlin/
